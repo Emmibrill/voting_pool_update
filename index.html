@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAAKISS POOL UPDATE</title>
+    <link rel="shortcut icon" href="blue-bmw.png" type="image/x-icon">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: 'comfortaa', cursive;
+    }
+    .face__of{
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        color: black;
+        -webkit-text-stroke: 1px white;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .logo{
+        position: relative;
+        height: 20rem;
+        background-image: url(black-skyline.png);
+        background-position: center;
+        background-size: cover;
+        object-fit: cover;
+    }
+    .logo-image{
+        position: absolute;
+    }
+
+    /*contestants*/
+
+    .container{
+        background: rgb(8 8 8);
+    }
+    .title{
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 0 1rem;
+        text-transform: uppercase;
+        letter-spacing: 1rem;
+    }
+    .contestants__container{
+        margin-top: .5rem;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(min(25rem, 100%), 1fr));  
+    }
+    .contestant{
+        margin-top: .5rem;
+        color: white;
+        padding: 2rem;
+        
+    }
+    .con__img{
+        position: relative;
+        height: 25rem;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid mediumslateblue;
+        border-radius: 1rem;
+        margin-bottom: 1rem;
+    }
+    .image{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .con__name,
+    .con__department, 
+    .con__lga, 
+    .con__code{
+        text-transform: capitalize;
+        margin: 1rem 0;
+    }
+    .voting-pro__container{
+        position: relative;
+        margin: 1rem 0;
+        height: 2rem;
+        background: rgb(138, 138, 136, .4);
+        border: transparent;
+        border-radius: 1rem;
+    }
+    .progress__bar{
+        position: absolute;
+        height: 100%;
+        width: 50%;
+        background-image: linear-gradient(to right, blue, rgb(32, 32, 80), rgb(78, 78, 175));
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: .7rem;
+    }
+    .voting__calc{
+        display: none;
+    }
+    .vote__num span{
+        color: blue;
+    }
+    @media (max-width:768px) {
+            .face__of{
+            font-size: 2.5rem;
+            color: black;
+            -webkit-text-stroke: 1px white;
+        }
+
+        /*contestants*/
+
+        .container{
+            background: rgb(8 8 8);
+        }
+        .con__name,
+        .con__department, 
+        .con__lga, 
+        .con__code{
+            font-size: 1rem;
+        }
+        .progress__bar{
+            font-size: ;
+        }
+        .vote__num span{
+            color: ;
+        }
+    }
+    @media (max-width:500px) {
+            .face__of{
+            font-size: 2rem;
+            line-height: 3rem;
+            color: red;
+            -webkit-text-stroke: .5px white;
+        }
+
+        /*contestants*/
+
+        .con__img{
+            height: 20rem;
+        }
+        .title{
+            letter-spacing: .3rem;
+        }
+        .con__name,
+        .con__department, 
+        .con__lga, 
+        .con__code{
+            font-size: .9rem;
+        }
+        .voting-pro__container{
+            height: 1.5rem
+        }
+        .progress__bar{
+            font-size: .5rem;
+        }
+        .vote__num span{
+            /*color: ;*/
+        }
+        .vote__num{
+            font-size: .9rem;
+        }
+    }
+    @media (max-width:375px) {
+        .face__of{
+        font-size: 1.5rem;
+    }
+
+        /*contestants*/
+
+        .title{
+            letter-spacing: .1rem;
+        }
+        .con__name,
+        .con__department, 
+        .con__lga, 
+        .con__code{
+            font-size: .8rem;
+        }
+        .voting-pro__container{
+            height: 1.3rem
+        }
+        .vote__num span{
+            /*color: ;*/
+        }
+    }
+
+</style>
+<body>
+    <div class="naakiss__logo">
+        <div class="logo">
+            <h1 class = "face__of">face of naakiss unn magazine voting pool update</h1>
+        </div>
+    </div> 
+
+    <div class="container">
+        <h1 class="title">contestants</h1> 
+        <div class="contestants__container">
+            <div class="contestant">
+                <div class="con__img">
+                    <img class="image" src="black-skyline.png" alt="">
+                </div>
+                <div class="con__details">
+                    <h2 class="con__name">contestant's name</h2>
+                    <h3 class="con__department">contestant's department</h3>
+                    <h3 class="con__lga">contestant's local government area</h3>
+                    <h2 class="con__code">voting code: C102</h2>
+                </div>
+                <div class="voting__dynamic">
+                    <div class="voting-pro__container">
+                        <div class="progress__bar"></div>
+                    </div>
+                    <div class="voting__calc">
+                        <div class="progress__overall">700</div>
+                        <div class="noOf__vote">40</div>
+                    </div>
+                </div>
+                <div class="number-of__vote">
+                    <h3 class="vote__num"><span>votes: </span>0</h3>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    const conContainer = document.querySelector('.contestants__container');
+    let thecontestants = '';
+    let contestants = [
+        {
+            con_img: 'grey-gwagon',
+            name: 'contestant one',
+            dept: 'department',
+            lga: 'local government area',
+            v_code: 'C103',
+            no_of_vote: '40',
+            vote_count_display: '40'
+        },
+        {
+            con_img: 'red-dodge',
+            name: 'contestant one',
+            dept: 'department',
+            lga: 'local government area',
+            v_code: 'C103',
+            no_of_vote: '60',
+            vote_count_display: '60'
+        },
+        {
+            con_img: 'yellow-porsche',
+            name: 'contestant one',
+            dept: 'department',
+            lga: 'local government area',
+            v_code: 'C103',
+            no_of_vote: '80',
+            vote_count_display: '80'
+        },
+        {
+            con_img: 'white-chevy',
+            name: 'contestant one',
+            dept: 'department',
+            lga: 'local government area',
+            v_code: 'C103',
+            no_of_vote: '100',
+            vote_count_display: '100'
+        },
+        {
+            con_img: 'blue-bmw',
+            name: 'contestant one',
+            dept: 'department',
+            lga: 'local government area',
+            v_code: 'C103',
+            no_of_vote: '120',
+            vote_count_display: '120'
+        }
+    ]
+    contestants.forEach(con => {
+        thecontestants += `
+        <div class="contestant">
+            <div class="con__img">
+                <img class="image" src="${con.con_img}.png" alt="">
+            </div>
+            <div class="con__details">
+                <h2 class="con__name">${con.name}</h2>
+                <h3 class="con__department">${con.dept}</h3>
+                <h3 class="con__lga">${con.lga}</h3>
+                <h2 class="con__code">voting code: ${con.v_code}</h2>
+            </div>
+            <div class="voting__dynamic">
+                <div class="voting-pro__container">
+                    <div class="progress__bar"></div>
+                </div>
+                <div class="voting__calc">
+                    <div class="progress__overall">700</div>
+                    <div class="noOf__vote">${con.no_of_vote}</div>
+                </div>
+            </div>
+            <div class="number-of__vote">
+                <h3 class="vote__num"><span>votes: </span>${con.vote_count_display}</h3>
+            </div>
+            
+        </div>
+        `
+        conContainer.innerHTML = thecontestants;
+    })
+
+
+
+
+
+
+    const progressBar = document.querySelectorAll('.progress__bar');
+
+    const updateVote = () => {        
+        for (let i = 0; i < progressBar.length; i++) {
+            const eachProgressBar = progressBar[i];
+            const projectOverall = parseInt(eachProgressBar.parentElement.nextElementSibling.firstElementChild.innerHTML);
+            const eachPerVote = parseInt(eachProgressBar.parentElement.nextElementSibling.lastElementChild.innerHTML);
+            console.log(projectOverall);
+            console.log(eachPerVote);
+            
+
+            eachProgressBar.style.width = `${( eachPerVote/projectOverall)*100}%`
+            eachProgressBar.innerHTML = `${(( eachPerVote/projectOverall)*100).toFixed(1)}%`
+            
+        }
+    }
+    updateVote()
+</script>
+</html>
